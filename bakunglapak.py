@@ -67,7 +67,7 @@ class WindowLihatBarang(tk.Toplevel):
             i += 1
 
         self.btn_exit = tk.Button(self, text = "EXIT", \
-                                  command = self.destroy).grid(row = i, column=1)
+                                  command = self.destroy).grid(row = i, column=1,pady=5)
 
 
 class WindowBeliBarang(tk.Toplevel):
