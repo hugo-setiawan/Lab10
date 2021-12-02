@@ -118,6 +118,7 @@ class WindowBeliBarang(tk.Toplevel):
 class WindowCheckOut(tk.Toplevel):
     def __init__(self, buyer, master = None):
         super().__init__(master)
+        self.buyer = buyer
         self.wm_title("Daftar Barang")
         self.daftar_dibeli = buyer.get_daftar_beli()
         self.create_widgets()
