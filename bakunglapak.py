@@ -76,7 +76,7 @@ class WindowBeliBarang(tk.Toplevel):
         self.buyer = buyer
         self.product_dict = product_dict
         self.wm_title("Beli Barang")
-        self.geometry("280x100")
+        self.geometry("280x125")
         self.create_widgets()
 
     def create_widgets(self):
