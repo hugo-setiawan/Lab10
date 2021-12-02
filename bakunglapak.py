@@ -145,7 +145,7 @@ class WindowCheckOut(tk.Toplevel):
                 tk.Label(self, \
                         text = f"{jumlah}").grid(row = i, column= 2)
                 i += 1
-        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=i,column=1)
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=i,column=1,pady=5)
 
 
 class MainWindow(tk.Frame):
