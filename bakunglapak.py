@@ -124,9 +124,9 @@ class WindowCheckOut(tk.Toplevel):
         self.create_widgets()
 
     def create_widgets(self):
-        self.grid_columnconfigure(0,weight=1,uniform="maingroup")
-        self.grid_columnconfigure(1,weight=1,uniform="maingroup")
-        self.grid_columnconfigure(2,weight=1,uniform="maingroup")
+        self.grid_columnconfigure(0,weight=1,uniform="main_table")
+        self.grid_columnconfigure(1,weight=1,uniform="main_table")
+        self.grid_columnconfigure(2,weight=1,uniform="main_table")
         self.lbl_judul = tk.Label(self, text="Keranjangku").grid(row = 0, column = 1)
         self.lbl_nama_title = tk.Label(self, text="Nama Produk").grid(row = 1, column = 0)
         self.lbl_harga_title = tk.Label(self, text="Harga Barang").grid(row = 1, column = 1)
@@ -134,6 +134,7 @@ class WindowCheckOut(tk.Toplevel):
         self.var_daftar_beli = self.buyer.get_daftar_beli()
         i = 2
         if self.var_daftar_beli == {}:
+            self.grid_columnconfigure(1,weight=0,uniform="non_table")
             tk.Label(self, text="Belum ada barang yang dibeli :(").grid(row = 2, column= 1)
             i += 1
         else:
