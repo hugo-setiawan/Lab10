@@ -97,7 +97,9 @@ class WindowBeliBarang(tk.Toplevel):
         jumlah = int(self.var_jumlah.get())
 
         if nama_barang == "":
-            tkmsg.showerror(title="StringNamaKosong",parent=self,message="Tidak ada nama barang yang hendak dibeli!")
+            self.action = tkmsg.askretrycancel(title="StringNamaKosong",parent=self,message="Nama barang tidak boleh kosong!")
+            if self.action == False:
+                self.destroy()            
         elif nama_barang not in self.product_dict:
             self.action = tkmsg.askretrycancel(title="BarangNotFound",parent=self,message=f"Barang dengna nama {nama_barang} tidak ditemukan dalam BakungLapak.")
             if self.action == False:
