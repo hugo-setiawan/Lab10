@@ -93,24 +93,24 @@ class WindowBeliBarang(tk.Toplevel):
         self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=4,column=1)
 
     def beli_barang(self):
-        # TODO: lengkapi method ini, yang merupakan event handler untuk
-        # button BELI
-        nama_barang = self.ent_nama_barang.get()
-        jumlah = int(self.ent_jumlah.get())
+        nama_barang = self.var_nama.get()
+        jumlah = int(self.var_jumlah.get())
 
         if nama_barang == "":
-            # TODO : jika input barang merupakan string kosong
+            tkmsg.showerror(title="StringNamaKosong",parent=self,message="Tidak ada nama barang yang hendak dibeli!")
         elif nama_barang not in self.product_dict:
-            # TODO : jika barang tidak ditemukan
+            self.action = tkmsg.askretrycancel(title="BarangNotFound",parent=self,message=f"Barang dengna nama {nama_barang} tidak ditemukan dalam BakungLapak.")
+            if self.action == False:
+                self.destroy()
         elif self.product_dict[nama_barang].get_stok() - jumlah < 0:
-            # TODO : jika stok habis
-        else :
+            tkmsg.showwarning(title="StokEmpty",parent=self,message="Maaf, stok produk telah habis.")
+        else:
             barang = self.product_dict[nama_barang]
             buyer.add_daftar_beli(barang, jumlah)
             barang.set_stok(jumlah)
-            self.ent_nama_barang.delete(0, tk.END)
-            self.ent_jumlah.delete(0, tk.END)
-            tkmsg.showinfo("Berhasil!", f"Berhasil membeli {nama_barang}")
+            self.entry_nama.delete(0, tk.END)
+            self.entry_jumlah.delete(0, tk.END)
+            tkmsg.showinfo("Berhasil!", f"Berhasil membeli {nama_barang}",parent=self)
 
 
 class WindowCheckOut(tk.Toplevel):
