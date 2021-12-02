@@ -67,7 +67,7 @@ class WindowLihatBarang(tk.Toplevel):
             i += 1
 
         self.btn_exit = tk.Button(self, text = "EXIT", \
-                                  command = self.destroy).grid(row = i, column=1,pady=5)
+                                  command = self.destroy, padx=10).grid(row = i, column=1,pady=5)
 
 
 class WindowBeliBarang(tk.Toplevel):
@@ -89,8 +89,8 @@ class WindowBeliBarang(tk.Toplevel):
         self.entry_nama.grid(row=1,column=1)
         self.entry_jumlah = tk.Entry(self, textvariable=self.var_jumlah)
         self.entry_jumlah.grid(row=2,column=1)
-        self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang).grid(row=3,column=1,pady=2)
-        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=4,column=1,pady=2)
+        self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang, padx=10).grid(row=3,column=1,pady=2)
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy, padx=10).grid(row=4,column=1,pady=2)
 
     def beli_barang(self):
         nama_barang = self.var_nama.get()
@@ -146,7 +146,7 @@ class WindowCheckOut(tk.Toplevel):
                 tk.Label(self, \
                         text = f"{jumlah}").grid(row = i, column= 2)
                 i += 1
-        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=i,column=1,pady=5)
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy, padx=10).grid(row=i,column=1,pady=5)
 
 
 class MainWindow(tk.Frame):
@@ -163,22 +163,22 @@ class MainWindow(tk.Frame):
 
         self.btn_lihat_daftar_barang = tk.Button(self, \
                                                  text = "LIHAT DAFTAR BARANG", \
-                                                 command = self.popup_lihat_barang)
+                                                 command = self.popup_lihat_barang, padx=10)
         self.btn_beli_barang = tk.Button(self, \
                                          text = "BELI BARANG", \
-                                         command = self.popup_beli_barang)
+                                         command = self.popup_beli_barang, padx=10)
         self.btn_check_out = tk.Button(self, \
                                        text = "CHECK OUT", \
-                                       command = self.popup_check_out)
+                                       command = self.popup_check_out, padx=10)
         self.btn_exit = tk.Button(self, \
                                   text = "EXIT", \
-                                  command = self.master.destroy)
+                                  command = self.master.destroy, padx=10)
 
-        self.label.pack()
-        self.btn_lihat_daftar_barang.pack()
-        self.btn_beli_barang.pack()
-        self.btn_check_out.pack()
-        self.btn_exit.pack()
+        self.label.pack(padx=5,pady=5)
+        self.btn_lihat_daftar_barang.pack(pady=1)
+        self.btn_beli_barang.pack(pady=1)
+        self.btn_check_out.pack(pady=1)
+        self.btn_exit.pack(pady=1)
 
     # semua barang yand dijual
     def popup_lihat_barang(self):
