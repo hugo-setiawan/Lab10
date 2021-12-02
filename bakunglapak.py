@@ -185,3 +185,4 @@ if __name__ == "__main__":
 
 # References:
 # https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/
+# https://stackoverflow.com/a/1101765
