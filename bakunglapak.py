@@ -124,6 +124,9 @@ class WindowCheckOut(tk.Toplevel):
         self.create_widgets()
 
     def create_widgets(self):
+        self.grid_columnconfigure(0,weight=1,uniform="maingroup")
+        self.grid_columnconfigure(1,weight=1,uniform="maingroup")
+        self.grid_columnconfigure(2,weight=1,uniform="maingroup")
         self.lbl_judul = tk.Label(self, text="Keranjangku").grid(row = 0, column = 1)
         self.lbl_nama_title = tk.Label(self, text="Nama Produk").grid(row = 1, column = 0)
         self.lbl_harga_title = tk.Label(self, text="Harga Barang").grid(row = 1, column = 1)
