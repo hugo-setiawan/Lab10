@@ -94,7 +94,7 @@ class WindowBeliBarang(tk.Toplevel):
 
         # Setup ukuran dan judul window dan buat widget
         self.wm_title("Beli Barang")
-        self.geometry("280x125")
+        self.geometry("280x140")
         self.create_widgets()
 
     def create_widgets(self):
@@ -110,13 +110,13 @@ class WindowBeliBarang(tk.Toplevel):
         self.var_nama = tk.StringVar()
         self.var_jumlah = tk.StringVar()
         self.entry_nama = tk.Entry(self, textvariable=self.var_nama)
-        self.entry_nama.grid(row=1,column=1)
+        self.entry_nama.grid(row=1,column=1,padx=10,pady=2)
         self.entry_jumlah = tk.Entry(self, textvariable=self.var_jumlah)
-        self.entry_jumlah.grid(row=2,column=1)
+        self.entry_jumlah.grid(row=2,column=1,padx=10,pady=2)
 
         # Buat tombol beli dan exit dan susun sesuai grid
         self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang, padx=10).grid(row=3,column=1,pady=2)
-        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy, padx=10).grid(row=4,column=1,pady=2)
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy, padx=10).grid(row=4,column=1,pady=5)
 
     def beli_barang(self):
         """
