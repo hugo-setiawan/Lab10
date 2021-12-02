@@ -146,10 +146,6 @@ class WindowCheckOut(tk.Toplevel):
 
 
 class MainWindow(tk.Frame):
-
-    # TODO: lengkapi proses binding event handler dengan buttons yang ada
-    # disini
-
     def __init__(self, buyer, product_dict, master = None):
         super().__init__(master)
         self.buyer = buyer
