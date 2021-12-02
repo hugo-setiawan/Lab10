@@ -97,7 +97,7 @@ class WindowBeliBarang(tk.Toplevel):
         jumlah = int(self.var_jumlah.get())
 
         if nama_barang == "":
-            self.action = tkmsg.askretrycancel(title="StringNamaKosong",parent=self,message="Nama barang tidak boleh kosong!")
+            self.action = tkmsg.askretrycancel(title="StringNamaKosong",parent=self,message="Nama barang tidak boleh kosong.")
             if self.action == False:
                 self.destroy()            
         elif nama_barang not in self.product_dict:
@@ -112,7 +112,7 @@ class WindowBeliBarang(tk.Toplevel):
             barang.set_stok(jumlah)
             self.entry_nama.delete(0, tk.END)
             self.entry_jumlah.delete(0, tk.END)
-            tkmsg.showinfo("Berhasil!", f"Berhasil membeli {nama_barang}",parent=self)
+            tkmsg.showinfo("Berhasil!", f"Berhasil membeli {nama_barang} sejumlah {jumlah}",parent=self)
 
 
 class WindowCheckOut(tk.Toplevel):
