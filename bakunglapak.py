@@ -85,10 +85,10 @@ class WindowBeliBarang(tk.Toplevel):
         self.lbl_jumlah = tk.Label(self, text = "Jumlah").grid(row=3,column=1)
         self.var_nama = tk.StringVar()
         self.var_jumlah = tk.IntVar()
-        self.entry_nama = tk.Entry(self, textvariable=self.var_nama).grid(row=3,column=2)
-        self.entry_jumlah = tk.Entry(self, textvariable=self.var_jumlah).grid(row=4,column=2)
-        self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang)
-        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy)
+        self.entry_nama = tk.Entry(self, textvariable=self.var_nama).grid(row=2,column=2)
+        self.entry_jumlah = tk.Entry(self, textvariable=self.var_jumlah).grid(row=3,column=2)
+        self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang).grid(row=5,column=2)
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=6,column=2)
 
     def beli_barang(self):
         # TODO: lengkapi method ini, yang merupakan event handler untuk
