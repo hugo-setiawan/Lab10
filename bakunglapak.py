@@ -89,8 +89,8 @@ class WindowBeliBarang(tk.Toplevel):
         self.entry_nama.grid(row=1,column=1)
         self.entry_jumlah = tk.Entry(self, textvariable=self.var_jumlah)
         self.entry_jumlah.grid(row=2,column=1)
-        self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang).grid(row=3,column=1)
-        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=4,column=1)
+        self.btn_beli = tk.Button(self, text="BELI", command=self.beli_barang).grid(row=3,column=1,pady=2)
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=4,column=1,pady=2)
 
     def beli_barang(self):
         nama_barang = self.var_nama.get()
