@@ -134,16 +134,16 @@ class MainWindow(tk.Frame):
 
         self.btn_lihat_daftar_barang = tk.Button(self, \
                                                  text = "LIHAT DAFTAR BARANG", \
-                                                 command = )
+                                                 command = self.popup_lihat_barang)
         self.btn_beli_barang = tk.Button(self, \
                                          text = "BELI BARANG", \
-                                         command = )
+                                         command = self.popup_beli_barang)
         self.btn_check_out = tk.Button(self, \
                                        text = "CHECK OUT", \
-                                       command = )
+                                       command = self.popup_check_out)
         self.btn_exit = tk.Button(self, \
                                   text = "EXIT", \
-                                  command = )
+                                  command = self.destroy)
 
         self.label.pack()
         self.btn_lihat_daftar_barang.pack()
