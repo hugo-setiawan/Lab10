@@ -180,3 +180,6 @@ if __name__ == "__main__":
     m = MainWindow(buyer, product_dict)
     m.master.title("BakungLapak")
     m.master.mainloop()
+
+# References:
+# https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/
