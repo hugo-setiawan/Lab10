@@ -168,7 +168,7 @@ class MainWindow(tk.Frame):
                                        command = self.popup_check_out)
         self.btn_exit = tk.Button(self, \
                                   text = "EXIT", \
-                                  command = self.destroy)
+                                  command = self.master.destroy)
 
         self.label.pack()
         self.btn_lihat_daftar_barang.pack()
