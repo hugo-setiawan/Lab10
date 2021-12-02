@@ -124,8 +124,25 @@ class WindowCheckOut(tk.Toplevel):
         self.create_widgets()
 
     def create_widgets(self):
-        # TODO: lengkapi method ini
-        pass
+        self.lbl_judul = tk.Label(self, text="Keranjangku").grid(row = 0, column = 1)
+        self.lbl_nama_title = tk.Label(self, text="Nama Produk").grid(row = 1, column = 0)
+        self.lbl_harga_title = tk.Label(self, text="Harga Barang").grid(row = 1, column = 1)
+        self.lbl_jumlah_title = tk.Label(self, text="Jumlah").grid(row = 1, column = 2)
+        self.var_daftar_beli = self.buyer.get_daftar_beli()
+        i = 2
+        if self.var_daftar_beli == {}:
+            tk.Label(self, text="Belum ada barang yang dibeli :(").grid(row = 2, column= 1)
+            i += 1
+        else:
+            for barang, jumlah in self.var_daftar_beli.items():
+                tk.Label(self, \
+                        text = f"{barang.get_nama()}").grid(row = i, column= 0)
+                tk.Label(self, \
+                        text = f"{barang.get_harga()}").grid(row = i, column= 1)
+                tk.Label(self, \
+                        text = f"{jumlah}").grid(row = i, column= 2)
+                i += 1
+        self.btn_exit = tk.Button(self, text="EXIT", command=self.destroy).grid(row=i,column=1)
 
 
 class MainWindow(tk.Frame):
