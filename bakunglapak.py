@@ -136,7 +136,7 @@ class WindowBeliBarang(tk.Toplevel):
 
         # Handle kasus jika barang yg diinput user tidak ada di bakunglapak
         elif nama_barang not in self.product_dict:
-            self.action = tkmsg.askretrycancel(title="BarangNotFound",parent=self,message=f"Barang dengna nama {nama_barang} tidak ditemukan dalam BakungLapak.")
+            self.action = tkmsg.askretrycancel(title="BarangNotFound",parent=self,message=f"Barang dengan nama {nama_barang} tidak ditemukan dalam BakungLapak.")
             # Jika user menekan cancel (return dari askretrycancel == False), hancurkan WindowBeliBarang ini
             if self.action == False:
                 self.destroy()
