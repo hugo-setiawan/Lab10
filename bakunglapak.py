@@ -170,6 +170,9 @@ class WindowCheckOut(tk.Toplevel):
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Fungsi ini membuat seluruh widget yang terdapat di WindowCheckOut
+        """                
         # Set agar ukuran semua kolom (kecuali tulisan blm ada barang dibeli) sama
         self.grid_columnconfigure(0,weight=1,uniform="main_table")
         self.grid_columnconfigure(1,weight=1,uniform="main_table")
