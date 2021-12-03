@@ -107,7 +107,7 @@ class WindowBeliBarang(tk.Toplevel):
         self.lbl_nama = tk.Label(self, text = "Nama Barang").grid(row=1,column=0)
         self.lbl_jumlah = tk.Label(self, text = "Jumlah").grid(row=2,column=0)
 
-        # Buat variabel untuk menampung input dari tk.Entry (input textbox) dan susun di grid
+        # Buat variabel untuk menampung input dari tk.Entry (input textbox) yang dibuat dan susun di grid
         self.var_nama = tk.StringVar()
         self.var_jumlah = tk.StringVar()
         self.entry_nama = tk.Entry(self, textvariable=self.var_nama)
