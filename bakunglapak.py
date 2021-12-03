@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter.font import Font
 import tkinter.messagebox as tkmsg
 
 class Product(object):
@@ -58,7 +59,7 @@ class WindowLihatBarang(tk.Toplevel):
         """
         # buat label2 judul dari tabel dan susun sesuai grid
         self.lbl_judul = tk.Label(self, \
-                                  text = 'Daftar Barang Yang Tersedia').grid(row = 0, column = 1)
+                                  text = 'Daftar Barang Yang Tersedia',font=Font(weight="bold")).grid(row = 0, column = 1)
         self.lbl_nama = tk.Label(self, \
                                  text = 'Nama Produk').grid(row = 1, column = 0)
         self.lbl_harga = tk.Label(self, \
@@ -102,7 +103,7 @@ class WindowBeliBarang(tk.Toplevel):
         Fungsi ini membuat seluruh widget yang terdapat di WindowBeliBarang
         """        
         # Buat label2 yang terdapat di window dan susun sesuai grid
-        self.lbl_judul = tk.Label(self, text = "Form Beli Barang").grid(row=0,column=1,columnspan=3)
+        self.lbl_judul = tk.Label(self, text = "Form Beli Barang",font=Font(weight="bold")).grid(row=0,column=1,columnspan=3)
         self.lbl_nama = tk.Label(self, text = "Nama Barang").grid(row=1,column=0)
         self.lbl_jumlah = tk.Label(self, text = "Jumlah").grid(row=2,column=0)
 
@@ -175,7 +176,7 @@ class WindowCheckOut(tk.Toplevel):
         self.grid_columnconfigure(2,weight=1,uniform="main_table")
 
         # Buat label2 judul dari tabel dan susun sesuai grid
-        self.lbl_judul = tk.Label(self, text="Keranjangku").grid(row = 0, column = 1)
+        self.lbl_judul = tk.Label(self, text="Keranjangku",font=Font(weight="bold")).grid(row = 0, column = 1)
         self.lbl_nama_title = tk.Label(self, text="Nama Produk").grid(row = 1, column = 0)
         self.lbl_harga_title = tk.Label(self, text="Harga Barang").grid(row = 1, column = 1)
         self.lbl_jumlah_title = tk.Label(self, text="Jumlah").grid(row = 1, column = 2)
