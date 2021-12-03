@@ -185,7 +185,7 @@ class WindowCheckOut(tk.Toplevel):
         i = 2
         # Handle kasus ketika blm ada barang yang dibeli oleh user
         if self.var_daftar_beli == {}:
-            # Set agar tulisan "Belum ada barang yang dibeli :(" tidak mempengaruhi ukuran kolom keseluruhan
+            # Set agar tulisan "Belum ada barang yang dibeli :(" tidak mempengaruhi ukuran kolom keseluruhan (based on references ke-4)
             self.grid_columnconfigure(1,weight=0,uniform="non_table")
             tk.Label(self, text="Belum ada barang yang dibeli :(").grid(row = 2, column= 1)
             i += 1
