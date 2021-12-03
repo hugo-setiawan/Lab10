@@ -156,10 +156,10 @@ class WindowBeliBarang(tk.Toplevel):
 
 
 class WindowCheckOut(tk.Toplevel):
-    def __init__(self, buyer, master = None):
-        """
-        WindowCheckOut adalah class yang menghasilkan window untuk melihat hasil checkout/pembelian.
-        """        
+    """
+    WindowCheckOut adalah class yang menghasilkan window untuk melihat hasil checkout/pembelian.
+    """    
+    def __init__(self, buyer, master = None):    
         # Inisiasikan tk.Toplevel sebagai parent class, kemudian assign variabel2 dari parameter di constructor
         super().__init__(master)
         self.buyer = buyer
