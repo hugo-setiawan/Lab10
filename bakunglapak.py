@@ -206,14 +206,24 @@ class WindowCheckOut(tk.Toplevel):
 
 
 class MainWindow(tk.Frame):
+    """
+    MainWindow adalah class yang menghasilkan window utama dari program.
+    """    
     def __init__(self, buyer, product_dict, master = None):
+        # Inisiasikan tk.Frame sebagai parent class, kemudian assign variabel2 dari parameter di constructor
         super().__init__(master)
         self.buyer = buyer
         self.product_dict = product_dict
+
+        # Buat widget dari window ini
         self.pack()
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Fungsi ini membuat seluruh widget yang terdapat di MainWindow
+        """        
+        # Buat label dan tombol2 dan susun dengan pack (dengan padding yg sesuai agar rapih)
         self.label = tk.Label(self, \
                               text = 'Selamat datang di BakungLapak. Silahkan pilih Menu yang tersedia')
 
